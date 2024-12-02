@@ -1,46 +1,31 @@
 module;
 
 #include <vector>
+#include <algorithm>
 #include <cstdint>
+#include <ranges>
 
 export module part_one;
 
 export namespace part_one {
 
-bool is_decreasing(const std::vector<int64_t> &level) {
-    for (size_t i = 1; i < level.size(); ++i) {
-        const auto& prev = level[i - 1];
-        const auto& cur = level[i];
+constexpr int64_t MAX_DIFF = 3;
+constexpr int64_t MIN_DIFF = 1;
+constexpr bool DECREASING = false;
+constexpr bool INCREASING = true;
 
-        if (cur >= prev || prev - cur > 3) {
-            return false;
-        }
-    }
-    return true;
+bool is_ordered(const std::vector<int64_t>& level, bool increasing) {
+    return std::all_of(level.begin() + 1, level.end(), [&](const int64_t& cur) {
+        const auto prev = &cur - 1;
+        return increasing ? 
+               (cur > *prev && cur - *prev <= MAX_DIFF) : 
+               (cur < *prev && *prev - cur <= MAX_DIFF);
+    });
 }
 
-bool is_increasing(const std::vector<int64_t> &level) {
-    for (size_t i = 1; i < level.size(); ++i) {
-        const auto& prev = level[i - 1];
-        const auto& cur = level[i];
-
-        if (cur <= prev || cur - prev > 3) {
-            return false;
-        }
-    }
-    return true;
+int64_t is_safe(const std::vector<std::vector<int64_t>>& levels) {
+    return std::ranges::count_if(levels, [](const std::vector<int64_t>& level) {
+        return is_ordered(level, INCREASING) || is_ordered(level, DECREASING);
+    });
 }
-
-int64_t is_safe(std::vector<std::vector<int64_t>> levels) {
-    int64_t num_safe = 0;
-    
-    for (auto &level : levels) {
-        if (is_decreasing(level) || is_increasing(level)) {
-            num_safe += 1;
-        }
-    }
-    return num_safe;
-    
-    }
-
 }
