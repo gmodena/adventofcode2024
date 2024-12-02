@@ -17,3 +17,4 @@ if(CMAKE_EXPORT_COMPILE_COMMANDS)
 endif()
 
 add_subdirectory(day01)
+add_subdirectory(day02)
