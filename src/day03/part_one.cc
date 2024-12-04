@@ -9,8 +9,8 @@ module;
 export module part_one;
 
 export namespace part_one {
-int64_t repair_memory(std::string memory) {
-    const std::regex mul_pattern(R"(mul\((\d+)\s*,\s*(\d+)\))");
+int64_t repair_memory(std::string& memory) {
+    const std::regex mul_pattern(R"(mul\((\d{1,3})\s*,\s*(\d{1,3})\))");
 
     int64_t sum = 0;
     for (auto it = std::sregex_iterator(memory.begin(), memory.end(), mul_pattern); it != std::sregex_iterator(); ++it) {

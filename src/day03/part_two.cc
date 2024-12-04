@@ -9,7 +9,7 @@ module;
 export module part_two;
 
 export namespace part_two {
-int64_t repair_memory(std::string &memory) {
+int64_t repair_memory(const std::string memory) {
     const std::regex mul_pattern(R"(mul\((\d+)\s*,\s*(\d+)\))");
     const std::regex instruction_pattern(R"(mul\((\d+)\s*,\s*(\d+)\)|do\(\)|don't\(\))");
 
