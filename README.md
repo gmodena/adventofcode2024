@@ -6,3 +6,5 @@ This year I'm brushing up modern c++.
 1. Sorting, hashmap
 2. Arrays
 3. Regular expressions 
+4. Search
+5. Arrays, sorting
