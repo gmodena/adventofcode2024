@@ -9,3 +9,4 @@ This year I'm brushing up modern c++.
 4. Search
 5. Arrays, sorting
 6. Path finding
+7. Backtracking
