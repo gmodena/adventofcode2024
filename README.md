@@ -10,3 +10,4 @@ This year I'm brushing up modern c++.
 5. Arrays, sorting
 6. Path finding
 7. Backtracking
+8. Geometry
