@@ -11,3 +11,5 @@ This year I'm brushing up modern c++.
 6. Path finding
 7. Backtracking
 8. Geometry
+9.
+10. BFS, DFS
