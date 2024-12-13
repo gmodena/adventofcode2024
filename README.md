@@ -15,3 +15,4 @@ This year I'm brushing up modern c++.
 10. BFS, DFS
 11. Dynamic Programming (ish)
 12. BFS
+13. Linear algebra
