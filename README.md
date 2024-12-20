@@ -21,3 +21,4 @@ This year I'm brushing up modern c++.
 16. Dijkstra
 17. Interpreter
 18. Dijkstra
+19. DFS, memoization
