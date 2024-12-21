@@ -23,3 +23,4 @@ This year I'm brushing up modern c++.
 18. Dijkstra
 19. DFS, memoization
 20. BFS
+21. Dijkstra, memoization
