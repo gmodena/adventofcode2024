@@ -24,3 +24,4 @@ This year I'm brushing up modern c++.
 19. DFS, memoization
 20. BFS
 21. Dijkstra, memoization
+22. Dynamic programming
