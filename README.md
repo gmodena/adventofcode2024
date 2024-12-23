@@ -25,3 +25,4 @@ This year I'm brushing up modern c++.
 20. BFS
 21. Dijkstra, memoization
 22. Dynamic programming
+23. Triads, Bron-Kerbosch
