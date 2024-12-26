@@ -26,3 +26,4 @@ This year I'm brushing up modern c++.
 21. Dijkstra, memoization
 22. Dynamic programming
 23. Triads, Bron-Kerbosch
+25. Set theory
